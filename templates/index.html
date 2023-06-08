@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+
+Добро пожаловать на форум программистов <br>
+<hr>
+
+<form action="/add_problem" method="post">
+
+</form>
+
+<hr>
+{% for problem in problems %}
+    Заголовок: {{ problem[0] }}
+    Вопрос: {{ problem[2] }}
+{% endfor %}
+
+</body>
+</html>
