@@ -10,7 +10,7 @@ def main_page():
 
     return render_template('index.html', context=context)
 
-@main_page_bp.route('/', methods=['get', 'post'])
+@main_page_bp.route('/', methods=['post'])
 def add_question():
     title = request.form.get('title')
     message = request.form.get('message')
