@@ -25,7 +25,7 @@ def add_problem_db(title, message):
 def get_all_problems_db():
     connection = sqlite3.connect('database/forum.db')
     sql = connection.cursor()
-    all_problems = sql.execute('SELECT * FROM problems;').fetchall()
+    all_problems = sql.execute('SELECT * FROM problems ORDER BY added_date DESC;').fetchall()
     return all_problems
 
 def add_answer_to_problem_db(problem_id, answer_message):

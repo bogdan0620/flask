@@ -10,10 +10,4 @@ def get_my_name(name):
     return f'My name is {name}'
 
 
-
-
-
-
-
-
 app.run()
